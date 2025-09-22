@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Starter webpage">
+</head>
+<body>
+    <main class="container">
+        <h1 class="title-demon">오늘의 띠별 운세</h1>
+        <p class="subtitle">띠를 고르고 "오늘의 운세 보기"로 소환하세요.</p>
+
+        <section class="card" aria-live="polite">
+            <div class="badge" id="outputType">운세</div>
+            <div class="message" id="outputText">버튼을 눌러 시작해보세요!</div>
+            <div class="meta" id="outputMeta"></div>
+        </section>
+        <div class="kakao-status" id="kakaoStatus" aria-live="polite"></div>
+
+        <div class="controls">
+            <div class="zodiac-grid" role="tablist" aria-label="띠 선택">
+                <button class="zbtn selected" data-zodiac="rat" aria-pressed="true" role="tab" title="쥐띠">🐭<span>쥐</span></button>
+                <button class="zbtn" data-zodiac="ox" aria-pressed="false" role="tab" title="소띠">🐮<span>소</span></button>
+                <button class="zbtn" data-zodiac="tiger" aria-pressed="false" role="tab" title="호랑이띠">🐯<span>호랑이</span></button>
+                <button class="zbtn" data-zodiac="rabbit" aria-pressed="false" role="tab" title="토끼띠">🐰<span>토끼</span></button>
+                <button class="zbtn" data-zodiac="dragon" aria-pressed="false" role="tab" title="용띠">🐲<span>용</span></button>
+                <button class="zbtn" data-zodiac="snake" aria-pressed="false" role="tab" title="뱀띠">🐍<span>뱀</span></button>
+                <button class="zbtn" data-zodiac="horse" aria-pressed="false" role="tab" title="말띠">🐴<span>말</span></button>
+                <button class="zbtn" data-zodiac="goat" aria-pressed="false" role="tab" title="양띠">🐐<span>양</span></button>
+                <button class="zbtn" data-zodiac="monkey" aria-pressed="false" role="tab" title="원숭이띠">🐵<span>원숭이</span></button>
+                <button class="zbtn" data-zodiac="rooster" aria-pressed="false" role="tab" title="닭띠">🐔<span>닭</span></button>
+                <button class="zbtn" data-zodiac="dog" aria-pressed="false" role="tab" title="개띠">🐶<span>개</span></button>
+                <button class="zbtn" data-zodiac="pig" aria-pressed="false" role="tab" title="돼지띠">🐷<span>돼지</span></button>
+            </div>
+            <button id="actionButton" type="button" class="primary">오늘의 운세 보기</button>
+            <button id="kakaoShare" type="button" class="secondary" aria-label="카카오톡으로 공유">카카오톡 공유</button>
+        </div>
+    </main>
+
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"></script>
+    <script src="assets/kakao-config.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
+
